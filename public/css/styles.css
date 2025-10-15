@@ -1,4 +1,24 @@
 /* Custom Styles for Bootstrap Responsive Website */
+/* <weight>: Use a value from 100 to 900
+ <uniquifier>: Use a unique and descriptive class name */
+.bannerTransmi {
+  font-family: "Bitcount Single Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <200>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0,
+    "SZP1" 0,
+    "SZP2" 0,
+    "XPN1" 0,
+    "XPN2" 0,
+    "YPN1" 0,
+    "YPN2" 0;
+}
+
 
 /* Root Variables */
 :root {

@@ -2,23 +2,58 @@
 /* <weight>: Use a value from 100 to 900
  <uniquifier>: Use a unique and descriptive class name */
 .bannerTransmi {
-  font-family: "Bitcount Single Ink", system-ui;
-  font-optical-sizing: auto;
-  font-weight: <200>;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0,
-    "SZP1" 0,
-    "SZP2" 0,
-    "XPN1" 0,
-    "XPN2" 0,
-    "YPN1" 0,
-    "YPN2" 0;
+    font-family: "Bitcount Single Ink", system-ui;
+    font-optical-sizing: auto;
+    font-weight: <200>;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0,
+        "SZP1" 0,
+        "SZP2" 0,
+        "XPN1" 0,
+        "XPN2" 0,
+        "YPN1" 0,
+        "YPN2" 0;
 }
 
+.titu {
+    color: black !important;
+    text-align: left;
+    font-family: roca, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 7rem;
+}
+
+.texto {
+    color: black !important;
+    font-family: "galix-mono", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.fondoContraste {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+}
+
+.imgFondo {
+    background:
+        linear-gradient(rgba(94, 21, 88, 0.95), rgba(233, 136, 71, 0.45)),
+        url(../img/transmi2.png) center/cover no-repeat;
+    border-radius: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+}
 
 /* Root Variables */
 :root {
@@ -68,7 +103,7 @@ body {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design Enhancements */
@@ -77,11 +112,11 @@ body {
         text-align: center;
         padding-top: 76px;
     }
-    
+
     .hero-section h1 {
         font-size: 2.5rem;
     }
-    
+
     .btn {
         width: 100%;
         margin-bottom: 1rem;
@@ -96,11 +131,11 @@ body {
     .hero-section h1 {
         font-size: 2rem;
     }
-    
+
     .display-5 {
         font-size: 2rem;
     }
-    
+
     .feature-icon {
         width: 60px;
         height: 60px;

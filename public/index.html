@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Sitio Web Responsivo</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.typekit.net/dtw1phk.css">
+
+
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -30,7 +42,7 @@
                         <a class="nav-link active" href="#home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Acerca de</a>
+                        <a class="nav-link" href="#about">Historia del G66</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Servicios</a>
@@ -48,11 +60,14 @@
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
+                    <h1 class="bannerTransmi">
+                        transmilenio
+                    </h1>
                     <h1 class="display-4 fw-bold text-white mb-4">
                         Bienvenido a Nuestro Sitio Web Responsivo
                     </h1>
                     <p class="lead text-white-50 mb-4">
-                        Creamos experiencias digitales increíbles utilizando las últimas tecnologías web. 
+                        Creamos experiencias digitales increíbles utilizando las últimas tecnologías web.
                         Nuestro sitio se adapta perfectamente a cualquier dispositivo.
                     </p>
                     <div class="d-flex gap-3">
@@ -66,8 +81,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image">
-                        <img src="https://via.placeholder.com/500x400/007bff/ffffff?text=Responsive+Design" 
-                             alt="Responsive Design" class="img-fluid rounded shadow">
+                        <img src="https://via.placeholder.com/500x400/007bff/ffffff?text=Responsive+Design"
+                            alt="Responsive Design" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -77,12 +92,50 @@
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="display-5 fw-bold mb-4">Acerca de Nosotros</h2>
-                    <p class="lead text-muted mb-5">
-                        Somos un equipo apasionado por crear sitios web modernos y responsivos 
-                        que brindan la mejor experiencia de usuario en todos los dispositivos.
+            <div class="row imgFondo">
+                <div class="col-lg-8 mx-auto text-center fondoContraste">
+                    <h2 class="display-5 fw-bold mb-4 titu">La ruta G66</h2>
+                    <p class="lead text-muted mb-5 texto">
+                        Era un viernes. A eso de las dos de la mañana. Bogotá estaba helada, callada, con ese viento
+                        que
+                        te corta las manos. Marcela venía de una rumba por el centro y, sin un peso para pagar un
+                        taxi,
+                        decidió caminar hacia su casa.
+                    </p>
+                    <p class="lead text-muted mb-5 texto">
+                        Pasando por la Jiménez, fue que vio una estación de Transmilenio desolada, apenas el sonido
+                        del
+                        agua corriendo por el eje y una que otra rata haciendo de las suyas. Todo estaba cerrado,
+                        pero
+                        de la nada se encendió un letrero naranja al fondo del andén. Un bus venía despacio, sin
+                        ruido
+                        de motor, solo se sentía un zumbido eléctrico. En el aviso decía: “G66 - Portal del Olvido”.
+                    </p>
+                    <p class="lead text-muted mb-5 texto">
+                        Marcela pensó que era una ruta nueva o algún servicio nocturno que habilitaron para esas
+                        fechas.
+                        Igual, el frío no perdona. Corrió para entrar a la estación… Se subió. Por dentro, olía a la
+                        humedad distintiva de una casa en la candelaria. Los pasajeros estaban ahí, callados,
+                        mirando
+                        fijo por las ventanas. Nadie decía nada. El conductor… ni se veía.
+                    </p>
+                    <p class="lead text-muted mb-5 texto">
+                        El bus arrancó, suavecito. Pasaban estaciones que ya deberían estar cerradas: Ricaurte,
+                        Comuneros, General Santander… todas vacías, oscuras. Nadie subía, nadie bajaba. Marcela
+                        trató de
+                        hablarle a una señora, pero la vieja volteó despacio y tenía los ojos… en blanco. Marcela
+                        salió
+                        volada hacia el conductor, pero no había volante, ni silla… ¡no había nadie! Solo un letrero
+                        que
+                        titilaba: “Próxima estación: Final del trayecto.”
+                    </p>
+                    <p class="lead text-muted mb-5 texto">
+                        Cuentan que, en las noches de octubre, entre las dos y las tres de la mañana, se escucha un
+                        zumbido eléctrico por la avenida Jiménez. Y porteros y guardias de seguridad aseguran ver un
+                        bus
+                        morado, que de vez en cuando, para a recoger un alma perdida con su nombre anunciado en
+                        luces
+                        naranjas: “G66 - Portal del Olvido”.
                     </p>
                 </div>
             </div>
@@ -262,8 +315,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="js/main.js"></script>
 </body>
+
 </html>

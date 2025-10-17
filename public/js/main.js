@@ -75,3 +75,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// ==== Animación de scroll del bus ====
+const scene = document.getElementById('scene');
+const canvas = document.getElementById('canvas');
+const bus = document.getElementById('bus');
+const pct = document.getElementById('pct');
+
+let vh = window.innerHeight;
+
+function updateSizes() {
+  vh = window.innerHeight;
+  canvas.style.height = Math.max(320, vh * 0.6) + 'px';
+}
+
+function getProgress() {
+  const rect = scene.getBoundingClientRect();
+  const total = scene.offsetHeight - vh;
+  const inside = Math.min(Math.max(-rect.top, 0), total);
+  return total > 0 ? inside / total : 0;
+}
+
+function render(p) {
+  const leftPad = canvas.clientWidth * 0.05;
+  const rightPad = canvas.clientWidth * 0.15;
+  const pathW = canvas.clientWidth - leftPad - rightPad;
+  const x = leftPad + pathW * p;
+
+  bus.style.transform = `translateX(${x}px) translateY(-50%)`;
+  pct.textContent = Math.round(p * 100) + '%';
+}
+
+let ticking = false;
+function onScrollOrResize() {
+  if (!ticking) {
+    ticking = true;
+    requestAnimationFrame(() => {
+      render(getProgress());
+      ticking = false;
+    });
+  }
+}
+
+updateSizes();
+render(0);
+window.addEventListener('scroll', onScrollOrResize, { passive: true });
+window.addEventListener('resize', () => {
+  updateSizes();
+  onScrollOrResize();
+});
+onScrollOrResize();

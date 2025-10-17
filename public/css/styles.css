@@ -19,25 +19,6 @@
         "YPN2" 0;
 }
 
-
-
-.Tipo-nom {
-     font-family: "Bitcount Single Ink", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 1100;
-    font-style: normal;
-    font-size:1.7rem;
-}
-
-.Tipo-tituseg {
-     color:#fcec98;
-    text-align: left;
-    font-family: roca, sans-serif;
-    font-weight: 60;
-    font-style: normal;
-    font-size: 1.7rem;
-}
-
 .titu {
     color: black !important;
     text-align: left;
@@ -54,23 +35,6 @@
     font-weight: 600;
     font-style: normal;
     font-size: 1.3rem;
-    text-align: justify;
-}
-
-.Titulo-desaparecidos {
-      font-family: "Bitcount Single Ink", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 3000;
-    font-style: normal;
-    text-align: center;
-    font-size: 5rem;
-}
-.texto-personajes {
-    color: white  !important;
-    font-family: "galix-mono", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1rem;
     text-align: justify;
 }
 
@@ -180,162 +144,43 @@ body {
         font-size: 1.5rem;
     }
 }
-.carta {
+.scene{
+  height: 320vh;     
   position: relative;
-  width: 350px;
-  background: #1a1a36 ;
-  border-radius: 14px;
+}
+
+
+.scene__pin{
+  position: sticky;
+  top: 72px;          
+  height: calc(100vh - 72px);
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-rows: 1fr;
+
+  
+  background-image: url('../img/fondo-bus.png');  
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat;
+  
+
+
+.canvas{
+  background: transparent;
 }
 
-.carta:hover {
-  transform: translateY(-4px);
 }
 
-
-.carta::before {
-  content: "";
+.bus {
   position: absolute;
-  inset: 0;
- background: url(../img/Camila.png) center/cover no-repeat;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  z-index: 0;
-  scale: 1.2;
+  top: calc(60% - 45px);
+  height: 90px;
+  transform: translateY(-50%);
+  will-change: transform;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.5));
+}
+.hud {
+  opacity: 0.9;
 }
 
-
-.carta:hover::before {
-  opacity: 1;
-}
-
-.carta2 {
-  position: relative;
-  width: 350px;
-  background: #1a1a36 ;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.carta2:hover {
-  transform: translateY(-4px);
-}
-
-
-.carta2::before {
-  content: "";
-  position: absolute;
-  inset: 0;
- background: url(../img/Personajesalfabetismo.png) center/cover no-repeat;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  z-index: 0;
-  scale: 1.2;
-}
-
-
-.carta2:hover::before {
-  opacity: 1;
-}
-.carta3 {
-  position: relative;
-  width: 350px;
-  background: #1a1a36 ;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.carta3:hover {
-  transform: translateY(-4px);
-}
-
-
-.carta3::before {
-  content: "";
-  position: absolute;
-  inset: 0;
- background: url(../img/Niño.png) center/cover no-repeat;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  z-index: 0;
-  scale: 0.7;
-}
-
-
-.carta3:hover::before {
-  opacity: 1;
-}
-.content {
-  position: relative;
-  z-index: 1; 
-  padding: 24px 28px;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 18px;
-  color: #0f172a;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th {
-  text-align: left;
-  padding: 8px 0;
-  font-size: 14px;
-  color: #1e293b;
-}
-
-td {
-  padding: 8px 0;
-  font-size: 14px;
-  color: #334155;
-}
-
-.desc {
-  font-size: 13px;
-  color: #1e293b;
-  background: rgba(255,255,255,0.6);
-  padding: 10px 12px;
-  border-radius: 8px;
-}
-
-footer {
-  padding: 10px 20px;
-  font-size: 12px;
-  color: #64748b;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  background: #fcec98;
-  position: relative;
-  z-index: 1;
-}
-
-.contenedorNeiblina {
-  position: relative;
-  width: 400px;
-  height: 250px;
-  padding: 20px;
-  background: #0f172a;
-  color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.imagen-superior {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 150px;
-  opacity: 0.6;
-  pointer-events: none; /* evita que bloquee clics o texto */
-  z-index: 5; /* más alto que el contenido */
-  transition: transform 0.2s ease-out;
-}

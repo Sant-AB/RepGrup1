@@ -48,7 +48,7 @@
                         <a class="nav-link" href="#services">Desaparecidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
+                        <a class="nav-link" href="#scene">Estaciones</a>
                     </li>
                 </ul>
             </div>
@@ -295,55 +295,39 @@
 </section>
         
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="display-5 fw-bold">Contáctanos</h2>
-                    <p class="lead text-muted">
-                        ¿Tienes un proyecto en mente? ¡Nos encantaría escucharte!
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <form class="contact-form">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="name" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="subject" class="form-label">Asunto</label>
-                                <input type="text" class="form-control" id="subject" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="message" rows="5" required></textarea>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">
-                                    <i class="bi bi-send"></i> Enviar Mensaje
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
+<!-- === Escena del bus con scroll === -->
+ 
+<section class="scene" id="scene">
+  <div class="scene__pin">
+    <div class="road"> <span id="pct"></span></div>
+
+    <div class="canvas" id="canvas">
+      <div class="road"></div>
+
+      <svg id="bus" class="bus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120">
+        <rect x="10" y="40" width="480" height="50" rx="8" fill="#6a0dad"/>
+        <rect x="230" y="40" width="20" height="50" fill="#999"/>
+        <rect x="20" y="45" width="90" height="25" fill="#a7c0d8"/>
+        <rect x="120" y="45" width="90" height="25" fill="#a7c0d8"/>
+        <rect x="250" y="45" width="90" height="25" fill="#a7c0d8"/>
+        <rect x="350" y="45" width="90" height="25" fill="#a7c0d8"/>
+        <circle cx="80" cy="95" r="10" fill="#222"/>
+        <circle cx="180" cy="95" r="10" fill="#222"/>
+        <circle cx="320" cy="95" r="10" fill="#222"/>
+        <circle cx="420" cy="95" r="10" fill="#222"/>
+
+      </svg>
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0">&copy; 2024 MiSitio. Todos los derechos reservados.</p>
+                    <p class="mb-0">&copy; .</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="social-links">

@@ -4,7 +4,7 @@
 .bannerTransmi {
     font-family: "Bitcount Single Ink", system-ui;
     font-optical-sizing: auto;
-    font-weight: <200>;
+    font-weight: 200;
     font-style: normal;
     font-variation-settings:
         "slnt" 0,
@@ -27,6 +27,7 @@
     font-style: normal;
     font-size: 7rem;
 }
+
 
 .texto {
     color: black !important;
@@ -122,6 +123,7 @@ header nav {
     border-radius: 10px;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    background-color: rgba(94, 21, 88, 0.95);
 }
 
 .card:hover {

@@ -58,7 +58,7 @@
 
 /* Root Variables */
 :root {
-    --primary-color: #007bff;
+    --primary-color: #07093A;
     --secondary-color: #6c757d;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -70,21 +70,45 @@ body {
 }
 
 /* Navigation Styles */
-.navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    font-size: 1.2rem;
+.navbar,
+#navbar,
+#mainNav,
+header nav {
+  background-color: #07093A !important; 
+  color: #ffffff;                        
 }
 
-/* Hero Section */
-.hero-section {
-    background: var(--primary-color);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 56px;
+
+.navbar a,
+#navbar a,
+#mainNav a {
+  color: #ffffff;                        
+  transition: color 0.3s ease;
 }
 
-/* Feature Icons */
+.navbar a:hover,
+#navbar a:hover,
+#mainNav a:hover {
+  color: #DC6A1D; 
+}                       
+
+
+#hero, .hero {
+  position: relative;
+  background: transparent !important;
+  padding: 0;
+  margin: 0;
+}
+
+.portada-img {
+  width: 100vw;
+  height: 200vh;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 .feature-icon {
     width: 80px;
     height: 80px;
@@ -95,7 +119,6 @@ body {
     margin: 0 auto 1rem;
 }
 
-/* Cards */
 .card {
     border-radius: 10px;
     margin-bottom: 20px;
@@ -108,7 +131,6 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design Enhancements */
 @media (max-width: 768px) {
     .hero-section {
         text-align: center;
@@ -144,43 +166,74 @@ body {
         font-size: 1.5rem;
     }
 }
-.scene{
-  height: 320vh;     
+
+#home.hero-section {
   position: relative;
-}
-
-
-.scene__pin{
-  position: sticky;
-  top: 72px;          
-  height: calc(100vh - 72px);
+  background: transparent !important;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
-  display: grid;
-  grid-template-rows: 1fr;
-
-  
-  background-image: url('../img/fondo-bus.png');  
-  background-size: cover;        
-  background-position: center;   
-  background-repeat: no-repeat;
-  
-
-
-.canvas{
-  background: transparent;
 }
 
+.portada-img {
+  width: 100vw;
+  height: 120vh;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
-.bus {
+.banner-container {
+  position: relative;
+  width: 100vw;
+  height: 120vh;
+  overflow: hidden;
+}
+
+.banner {
   position: absolute;
-  top: calc(60% - 45px);
-  height: 90px;
-  transform: translateY(-50%);
-  will-change: transform;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.5));
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 48px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
 }
-.hud {
-  opacity: 0.9;
+
+.marquee-track {
+  display: inline-flex;
+  width: max-content; 
+  animation: scrollLoop 28s linear infinite;
 }
+
+.marquee-track span {
+  white-space: nowrap;
+  font-family: 'Bitcount Single Ink', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 0.08em;
+  color: #e6e6e6;
+  line-height: 48px;
+  margin-right: 3rem; 
+}
+
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
 

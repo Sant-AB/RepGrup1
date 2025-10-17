@@ -69,10 +69,6 @@ body {
 }
 
 /* Navigation Styles */
-/* =======================================
-   NAVBAR PERSONALIZADO (color #07093A)
-   ======================================= */
-
 .navbar,
 #navbar,
 #mainNav,
@@ -89,7 +85,6 @@ header nav {
   transition: color 0.3s ease;
 }
 
-/* Al pasar el mouse */
 .navbar a:hover,
 #navbar a:hover,
 #mainNav a:hover {
@@ -97,7 +92,6 @@ header nav {
 }
 
 
-/* Sección hero (sin fondo azul) */
 #hero, .hero {
   position: relative;
   background: transparent !important;
@@ -105,17 +99,15 @@ header nav {
   margin: 0;
 }
 
-/* Imagen portada: ocupa todo el ancho de la pantalla */
 .portada-img {
-  width: 100vw;        /* Usa el 100% del viewport horizontal */
-  height: 115vh;       /* Opcional: ocupa toda la altura visible del navegador */
-  object-fit: cover;   /* Asegura que se recorte sin deformar */
+  width: 100vw;
+  height: 200vh;
+  object-fit: cover;
   display: block;
   margin: 0;
   padding: 0;
 }
 
-/* Feature Icons */
 .feature-icon {
     width: 80px;
     height: 80px;
@@ -126,7 +118,6 @@ header nav {
     margin: 0 auto 1rem;
 }
 
-/* Cards */
 .card {
     border-radius: 10px;
     margin-bottom: 20px;
@@ -138,7 +129,6 @@ header nav {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design Enhancements */
 @media (max-width: 768px) {
     .hero-section {
         text-align: center;
@@ -185,7 +175,7 @@ header nav {
 
 .portada-img {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   object-fit: cover;
   display: block;
   margin: 0;
@@ -195,16 +185,16 @@ header nav {
 .banner-container {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 115vh;
   overflow: hidden;
 }
 
 .banner {
   position: absolute;
-  top: 23.5%;
+  top: 12%;
   left: 0;
   width: 100%;
-  height: 42px;
+  height: 48px;
   overflow: hidden;
   pointer-events: none;
 }
@@ -214,13 +204,16 @@ header nav {
   top: 0;
   white-space: nowrap;
   will-change: transform;
-  font-family: 'Bitcount Single Ink', sans-serif;
+  font-family: 'Bitcount Single Ink', system-ui, sans-serif !important;
+  font-weight: 100;
+  font-style: normal;
   font-size: clamp(18px, 2.2vw, 32px);
   letter-spacing: 0.08em;
   color: #e6e6e6;
   text-shadow: 0 1px 2px rgba(0,0,0,0.45);
-  line-height: 42px;
+  line-height: 48px;
   animation: correr 14s linear infinite;
+  
 }
 
 .banner .marquee:nth-of-type(1) { left: 0%; }
@@ -231,8 +224,8 @@ header nav {
   to { transform: translateX(-100%); }
 }
 
-@font-face {
-  font-family: 'Bitcount Single Ink';
-  src: url('../assets/fonts/BitcountSingleInk.woff2') format('woff2');
-  font-display: swap;
-}
+
+
+
+
+

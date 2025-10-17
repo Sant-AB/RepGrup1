@@ -73,23 +73,23 @@ body {
 #navbar,
 #mainNav,
 header nav {
-  background-color: #07093A !important;  /* Fondo azul oscuro */
-  color: #ffffff;                        /* Texto claro */
+  background-color: #07093A !important; 
+  color: #ffffff;                        
 }
 
-/* Si hay links en el navbar, asegúrate de que se vean bien */
+
 .navbar a,
 #navbar a,
 #mainNav a {
-  color: #ffffff;                        /* Texto blanco */
+  color: #ffffff;                        
   transition: color 0.3s ease;
 }
 
 .navbar a:hover,
 #navbar a:hover,
 #mainNav a:hover {
-  color: #DC6A1D;                        /* Color de hover (amarillo suave, puedes cambiarlo) */
-}
+  color: #DC6A1D; 
+}                       
 
 
 #hero, .hero {
@@ -185,44 +185,50 @@ header nav {
 .banner-container {
   position: relative;
   width: 100vw;
-  height: 115vh;
+  height: 120vh;
   overflow: hidden;
 }
 
 .banner {
   position: absolute;
   top: 12%;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
   height: 48px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   pointer-events: none;
 }
 
-.banner .marquee {
-  position: absolute;
-  top: 0;
+.marquee-track {
+  display: inline-flex;
+  width: max-content; 
+  animation: scrollLoop 28s linear infinite;
+}
+
+.marquee-track span {
   white-space: nowrap;
-  will-change: transform;
-  font-family: 'Bitcount Single Ink', system-ui, sans-serif !important;
-  font-weight: 100;
-  font-style: normal;
-  font-size: clamp(18px, 2.2vw, 32px);
+  font-family: 'Bitcount Single Ink', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
   letter-spacing: 0.08em;
   color: #e6e6e6;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.45);
   line-height: 48px;
-  animation: correr 14s linear infinite;
-  
+  margin-right: 3rem; 
 }
 
-.banner .marquee:nth-of-type(1) { left: 0%; }
-.banner .marquee:nth-of-type(2) { left: 100%; }
-
-@keyframes correr {
-  from { transform: translateX(0%); }
-  to { transform: translateX(-100%); }
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
+
 
 
 
